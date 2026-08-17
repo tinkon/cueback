@@ -1,0 +1,26 @@
+{
+  "name": "cueback-protocol",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Cueback — an open MCP convention for handing AI-curated content to the apps where people consume it, and returning consumption context and the user's own words.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinkon/cueback.git"
+  },
+  "packageManager": "pnpm@11.0.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "biome check .",
+    "format": "biome check --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "typescript": "^5.8.3"
+  }
+}

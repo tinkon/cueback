@@ -1,0 +1,44 @@
+{
+  "name": "@cueback/podcast",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Cueback podcast profile: playback events and episode search results (zod v3 schemas + inferred types)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinkon/cueback.git",
+    "directory": "packages/podcast"
+  },
+  "homepage": "https://github.com/tinkon/cueback#readme",
+  "keywords": ["cueback", "mcp", "protocol", "podcast", "zod"],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "src"],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@cueback/core": "0.4.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

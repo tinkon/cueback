@@ -1,0 +1,12 @@
+# Node / TypeScript
+node_modules/
+coverage/
+*.log
+
+# dist/ is deliberately COMMITTED, not ignored: until the packages are on the npm
+# registry they are installed as git dependencies, and a git dependency ships
+# exactly what the ref contains — no build runs at install time. `pnpm build`
+# before committing keeps src/ and dist/ in step.
+
+# macOS
+.DS_Store

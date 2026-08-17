@@ -1,0 +1,16 @@
+# The two protocol schema packages: @cueback/core and @cueback/podcast.
+packages:
+  - "packages/*"
+
+# @cueback/podcast declares its @cueback/core dependency as a plain version, not
+# "workspace:*" — a workspace range is meaningless to anyone installing these
+# packages as git dependencies. This setting makes pnpm satisfy that plain version
+# from the local workspace while developing here; an external consumer points the
+# same dependency wherever it installed core from (see the root README).
+linkWorkspacePackages: true
+
+# Dependencies whose install scripts are allowed to run (pnpm blocks all build
+# scripts by default): biome's binary check and esbuild's binary install.
+allowBuilds:
+  "@biomejs/biome": true
+  esbuild: true
